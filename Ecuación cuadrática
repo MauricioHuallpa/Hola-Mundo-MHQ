@@ -1,0 +1,46 @@
+//Huallpa Quino Mauricio R. ETN307//
+//Ecuación cuadratica A*x^2 + B*x + C//
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+
+/* Este programa permite el calculo de las raices
+de una ecuacion cuadratica */
+
+/* Declaración de variables*/
+double a, b, c, x_1, x_2;
+double x_1r, x_1i, x_2r, x_2i;
+
+/* Entrada de datos */
+cout<< " coeficientes a, b y c de la ecuacion cuadratica \n";
+cin>>a >> b >> c;
+
+/* Procesamiento de datos y Salida de Resultados */
+if ( (pow(b,2.0) - 4.0 * a * c) > 0)
+{
+x_1 = ( -b + sqrt( pow(b,2.0) - 4.0 * a * c) ) / (2.0 * a);
+x_2 = ( -b - sqrt( pow(b,2.0) - 4.0 * a * c) ) / (2.0 * a);
+
+cout<<"\n";
+cout<<"La primera raiz es "<< x_1 << "\n";
+cout<<"La segunda raiz es "<< x_2 << "\n";
+cout<<"\n";
+}
+else
+{
+x_1r = -b / (2.0 * a);
+x_1i = sqrt( fabs(pow(b,2.0) - 4.0 * a * c) ) / (2.0 * a);
+x_2r = -b / (2.0 * a);
+x_2i = -sqrt( fabs(pow(b,2.0) - 4.0 * a * c) ) / (2.0 * a);
+
+cout<<"\n";
+cout<<"La primera raiz es "<< x_1r <<" + " <<x_1i << " i \n";
+cout<<"La segunda raiz es "<< x_2r <<" " <<x_2i << " i \n";
+cout<<"\n";
+}
+
+return 0;
+}//fin del programa//
